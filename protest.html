@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Anna Prenowitz — Protest</title>
+        <!--<meta charset="utf-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono">-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.typekit.net/gjh3whg.css">
+        <style>
+            
+            
+            .cormorant-garamond-light {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 300;
+                font-style: normal;
+            }
+
+            button {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 500;
+            }
+            
+
+            
+            * {
+                box-sizing: border-box;
+                /*font-family: 'Cutive Mono', serif;*/
+            }
+
+            body {
+                margin: 0;
+                /*font-family: 'Cutive Mono', serif;*/
+                cursor: none;
+            }
+                
+
+            a:link {
+                color: black;
+                text-decoration: none;
+
+            }
+
+            a:visited {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:hover {
+                cursor: none;
+            }
+
+            .square {
+                width: 12px;
+                height: 12px;
+                border: 2px solid black;
+            }
+
+            .cursors{
+                position: fixed;
+                top:0;
+                left:0;
+                transform: translate(-50%, -50%); /* this is to center the mouse cursor */
+                pointer-events: none;
+
+                z-index: 1; /* this is to make sure this is the top most element make this bigger if the cursor is going under other elements */
+            }
+
+            .sub-item {
+                border: none;
+                font-size: 20px;
+                background-color: white;
+                display: inline-block;
+            }
+
+            .sub-item:hover {
+                cursor: none;
+            }
+
+            .container {
+                display: flex;
+                justify-content: right;
+                margin-right: 6%;
+            }
+
+
+
+
+
+
+
+            #page1 {
+                color: black;
+                height: 160vh;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+
+                justify-content: space-between;
+            }
+
+            #page1 img {
+                width: 90%;
+                height: auto;
+                /*margin: 10%;*/
+                margin-top: 5%;
+                margin-left: 5%;
+                /*align-self: center;*/
+            }
+
+            
+
+            #writing-pg1 img {
+                /*align-self: center;*/
+                /*position: absolute;*/
+                /*margin-left: 12.5%;*/
+
+            }
+
+            
+
+           
+
+            #top-phone {
+                /*height: 10px;*/
+                width: 94%;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                
+                /*justify-content: end;*/
+            }
+
+            /*#writing-pg1 {
+                position: absolute;
+                top: 10%;
+                left: 5%;
+            }*/
+
+            #writing-header {
+                position: absolute;
+                top: 0%;
+                margin-top: 1%;
+                padding-top: 0;
+                /*left: 5%;*/
+                justify-self: right;
+                /*background-color: green;*/
+            }
+
+            #menucont {
+                display: none;
+                /*position: absolute;
+                left: 5%;
+                top: 42%;*/
+            }
+
+
+
+            
+
+            .menu {
+                opacity: 100%;
+                font-size: 15px;
+                font-weight: 50;
+                letter-spacing:.01cm;
+                /*font-family:'Times New Roman', Times, serif;*/
+                /*font-family: "brandon-grotesque", sans-serif;*/
+                font-weight: 200;
+                font-style: normal;
+            }
+
+            #writing-header {
+                font-weight: 500;
+                font-size: 35px;
+            }
+
+            #page1 hr {
+                width: 100%;
+                align-self: center;
+            }
+
+            #footer {
+                /*margin-top: 8%;*/
+                margin-bottom: 3%;
+                margin-left: 5%;
+                margin-right: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+            }
+
+            #footer p {
+                /*position: absolute;*/
+                /*margin-bottom: 500px;
+                margin-left: 5%;*/
+                /*height: 100%;*/
+                margin-top: 0;
+            }
+
+            #footer ul {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                padding: 0;
+                list-style:none;
+                
+            }
+            #footer li {
+                margin-right: 2%;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            #icon {
+                display: none;
+            }
+
+
+
+
+
+
+
+
+            /*resize for phone*/
+            
+            @media screen and (max-width: 800px) {
+
+                .body {
+                    cursor: default;
+                }
+                .square {
+                    border: none;
+                }
+
+                #page1 {
+                    height: 100vh;
+                }
+                
+                #writing-pg1 {
+                    height: 100%;
+
+                    position: static;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                #top-phone {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-top: 8%;
+                }
+
+                #span-cont {
+                    width: 50%;
+                    /*height: 100%;*/
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+
+                    justify-content: right;
+                    margin-right: 5%;
+                    
+
+                }
+
+                #icon {
+                    font-size: 60px;
+
+                    line-height: 30px;
+
+                    cursor: pointer;
+                    font-weight: 300;
+                    z-index: 6;
+                    display: inline-block;
+                    /*color: white;*/
+
+                    transition: 0.5s; /*the JS rotation!*/
+                }
+
+                #menucont {
+                    display: block;
+                    background-color: black;
+                    color: white;
+                    position: absolute;
+                    height: 100vh;
+                    width: 100vw;
+                    top: 50%;
+                    left: -50%; /*CHANGE. MADE POSITIVE TO SEE IT EASILY*/
+                    transform: translate(-50%, -50%);
+                    transition: 0.5s ease-out;
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    /*justify-content: bottom;*/
+                    padding-left: 10%;
+                    padding-top: 95%;
+                    z-index: 5;
+                    
+
+                    
+                }
+
+                #top-menu-item {
+                    margin-top: 20%;
+                }
+                
+                #menucont a {
+                    color: white;
+                }
+
+                .menu {
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    font-size: 30px;
+                    line-height: 45px;
+                    padding: 0;
+                    margin: 0;
+                }
+
+
+                /*I THINK THIS IS JUST FOR THEIR DESIGN*/
+                
+                .menu::before {
+                    position: absolute;
+                    transition: 0.5s ease-out;
+                }
+                .menu:hover::before {
+                    transform: scale(15);
+                }
+                
+
+
+
+
+
+
+
+
+
+                
+
+
+
+                #writing-header {
+                    /*making sure the settings from laptop aren't affecting it*/
+                    top: 0;
+                    left: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+
+                    position: static;
+                    /*height: 10%;*/ /*CHANGED THIS MIGHT BE WEIRD*/
+                    font-size: 30px;
+                    font-weight: 300;
+                    margin-left: 5%;
+
+
+                }
+
+                #writing-pg1 img {
+                    padding-top:0;
+                    width: 90%;
+                    margin-left: 5%;
+                    
+                    margin-top: 20%;
+                }
+
+                #footer {
+                    display: none;
+                }
+                
+                
+            }
+                
+
+            
+
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="cursors square" data-cursor-dot></div>
+
+        <div id="page1">
+            <div id="writing-pg1">
+                <div id="top-phone"><p id="writing-header"><a href="index.html">Anna Prenowitz</a></p><div id="span-cont"><span id="icon" onclick="menucont(this)">+</span></div></div>
+                <div id="img-cont">
+                    <img class="mySlides" src="images/DSC04114.JPG">
+                    <img class="mySlides" src="images/DSC04132.JPG">
+                    <img class="mySlides" src="images/mlk.jpg">
+                    <img class="mySlides" src="images/radio.jpg">
+                    
+                </div>
+                <div class="container">
+                    <button class="sub-item" onclick="plusDivs(-1)"> previous </button>
+                    <button class="sub-item" onclick="plusDivs(1)"> next </button>
+                </div>
+                
+                <div id="menucont">
+                    <p class="menu" id="top-menu-item"><a href="street_photography.html">Streets</a></p>
+                    <p class="menu"><a href="travel.html">Travel</a></p>
+                    <p class="menu"><a href="soleil.html">Theatre du Soleil</a></p>
+                    <p class="menu"><a href="portraits.html">Portraits</a></p>
+                    <p class="menu"><a href="prints.html">Prints</a></p>
+                    <p class="menu"><a href="protest.html">Protest</a></p>
+                </div>
+                
+            </div>
+            <div id="footer">
+                <hr>
+                <!--<p><a href="mailto:annaprenowitz@gmail.com">Email me.</a></p>-->
+                <ul>
+                    <li><a href="street_photography.html">Streets</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="soleil.html">Theatre du Soleil</a></li>
+                    <li><a href="portraits.html">Portraits</a></li>
+                    <li><a href="prints.html">Prints</a></li>
+                    <li><a href="protest.html">Protest</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <!--JavaScript!-->
+        <script>
+
+            const cursorDot = document.querySelector("[data-cursor-dot]");
+            const cursorTriangle = document.querySelector("[data-cursor-triangle]");
+            window.addEventListener("mousemove", function(e) {
+                const posX = e.clientX;
+                const posY = e.clientY;
+
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+
+                cursorTriangle.style.left = `${posX}px`;
+                cursorTriangle.style.top = `${posY}px`;
+            })
+
+
+
+
+            /*
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const dropdownContent = document.querySelector(".dropdown-content");
+
+            dropdownBtn.addEventListener("click", () => {
+                dropdownContent.classList.toggle("menu-open");
+                dropdownBtn.setAttribute("aria-expanded",dropdownBtn.getAttribute("aria-expanded") === "true" ? "false" : "true");
+            });
+            */
+
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+
+
+
+
+        // reveal menu on phone
+        var x=0;
+        var element = document.getElementById("menucont");
+        function menucont(icon) {
+            if(x==0) {
+                icon.style.transform = "rotate(45deg)";
+                element.style.left = '50%';
+                icon.style.color = "white";
+                x=1;
+            }
+            else {
+                icon.style.transform = "rotate(0deg)";
+                element.style.left = '-50%';
+                icon.style.color = "black";
+                x=0;
+            }
+        }
+
+
+
+
+
+
+
+            // JS for changing slides...
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-red", "");
+                }
+                x[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " w3-red";
+            }
+        </script>
+
+    </body>
+
+
+
+
+
+</html>
+
+
