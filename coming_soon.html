@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<title>Anna Prenowitz — Coming Soon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+
+
+    .cormorant-garamond-light {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        cursor:none;
+    }
+
+    .square {
+        width: 12px;
+        height: 12px;
+        border: 2px solid black;
+    }
+
+
+    .cursors{
+        position: fixed;
+        top:0;
+        left:0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+
+        z-index: 1;
+    }
+
+
+
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        cursor: none;
+    }
+
+
+
+
+
+
+
+
+    
+
+    #page1 {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    #name_cont {
+        height: 3%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+
+
+        margin-top: 2%;
+        opacity: 100%;
+        font-size: 15px;
+        font-weight: 50;
+        letter-spacing:.01cm;
+        font-weight: 200;
+        font-style: normal;
+        flex-direction: row;
+
+        margin-bottom: 10%;
+    }
+
+
+    #name {
+        font-weight: 500;
+        font-size: 30px;
+        margin-right: 7%;
+    }
+
+
+
+
+
+    #animated-text-strip{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: end;
+        overflow: hidden;
+    }
+    #animated-text-strip .marquee {
+        white-space: nowrap;
+        animation: marquee 5s linear infinite;
+        max-width: none;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(-100%, 0);
+        }
+    }
+
+    /* Styles for the sake of the demonstration */
+    #animated-text-strip{
+        padding: 1rem 0;
+        height: 100%;
+        
+    }
+    .marquee{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+
+    
+
+
+
+
+    @media screen and (max-width: 800px) {
+
+        #page1 {
+            height: 100vh;
+        }
+
+        #name_cont {
+            height: 5%;
+            margin-top: 5%;
+        }
+
+        body {
+            cursor: auto;
+        }
+
+        .square {
+            border: none;
+        }
+
+        #animated-text-strip {
+            margin-bottom: 15%;
+        }
+
+        
+    }
+    
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+
+
+    <div class="cursors square" data-cursor-dot></div>
+
+    <div id="page1">
+
+        <div id="name_cont">
+            <a class="p-pg1" id="name" href="index.html">Anna Prenowitz</a>
+        </div>
+
+
+        <div id="animated-text-strip">
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+            <span class="marquee">Coming soon.&nbsp;</span>
+          </div>
+
+        
+
+        
+
+    
+    </div>
+
+
+    <script>
+
+        const cursorDot = document.querySelector("[data-cursor-dot]");
+        const cursorTriangle = document.querySelector("[data-cursor-triangle]");
+        window.addEventListener("mousemove", function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorTriangle.style.left = `${posX}px`;
+            cursorTriangle.style.top = `${posY}px`;
+        })
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
