@@ -1,445 +1,526 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Anna Prenowitz</title>
-        <!--<meta charset="utf-8">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono">-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+        <link rel="icon" href="img/deGaulle.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://use.typekit.net/gjh3whg.css">
         <style>
-            
-            
-            .cormorant-garamond-light {
-                font-family: "Cormorant Garamond", serif;
-                font-weight: 300;
-                font-style: normal;
+            html {
+                overflow-x: hidden;
             }
-            
-
-            
-            * {
-                box-sizing: border-box;
-                /*font-family: 'Cutive Mono', serif;*/
-            }
-
             body {
+                overflow-x: hidden;
+                padding: 0;
                 margin: 0;
-                /*font-family: 'Cutive Mono', serif;*/
-                cursor: none;
+                font-family: "neue-haas-grotesk-display", sans-serif;
+                
             }
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-weight: 500;
+                font-style: normal;
+                font-size: .64em;
+                letter-spacing: .05em;
+                margin: 0;
+                margin-bottom: .3em;
+
                 
 
-            a:link {
-                color: black;
-                text-decoration: none;
+                display: inline-block;
+            }
+            h2 {
+                font-style: normal;
 
+                /*font-size: 1em;*/ /*orig*/
+                font-size: .64em; /*same as p*/
+                /*font-weight: 600;*/ /*orig*/
+                font-weight: 1000;
+                /*text-decoration: underline;*/
+
+                letter-spacing: .05em;
+                margin: 0;
+                margin-bottom: 0.3em;
             }
 
-            a:visited {
-                color: black;
-                text-decoration: none;
+            hr {
+                width: 98vw;
+                height: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
             }
 
-            a:hover {
-                cursor: none;
+            #hr-writing { /*Doesn't seem to show up here*/
+                height: 98%;
+                width: .5px;
             }
+            
+            #page {
+                overflow: hidden;
+                width: 100%;
 
-            .square {
-                width: 12px;
-                height: 12px;
-                border: 2px solid black;
+                display: flex;
+                flex-direction: column;
             }
-
-            .cursors{
-                position: fixed;
-                top:0;
-                left:0;
-                transform: translate(-50%, -50%); /* this is to center the mouse cursor */
-                pointer-events: none;
-
-                z-index: 1; /* this is to make sure this is the top most element make this bigger if the cursor is going under other elements */
+            .light {
+                font-weight: 100;
             }
+            #sec1 {
 
+                /*height: 60vh;*/
 
+                display: flex;
+                flex-direction: row;
 
+                align-items: stretch;
 
+            }
+            .sec1-elem {
+                width: 25%;
+                height: 100%;
+                box-sizing: border-box;
 
+                padding: .9%;
 
-
-            #page1 {
-                color: black;
-                height: 140vh;
-                width: 100vw;
                 display: flex;
                 flex-direction: column;
 
-                justify-content: space-between;
-            }
+                flex: 1;
 
-            #page1 img {
-                width: 75%;
+                padding-bottom: 15vh; /*Just for writing column*/
+            }
+            #sec1-anim {
+                /*height: 60vh;*/
+                /*min-height: 100%;*/
+
+                padding-bottom: 0;
+
+            }
+            #sec1-anim img { /*Same properties will transfer to animation*/
+                align-self: center;
+                justify-self: center;
+                width: 100%;
                 height: auto;
-                /*margin: 10%;*/
-                margin-top: 4%;
-                align-self: center;
             }
-
             
+            #sec2 {
+                /*height: 120vh;*/
+                width: 100%;
 
-            #writing-pg1 img {
-                align-self: center;
-                /*position: absolute;*/
-                margin-left: 12.5%;
+                display: flex;
+                flex-direction: column;
+
+                padding-left: 1%;
+                padding-right: 1%;
+                box-sizing: border-box;
+
+                /*margin-left: 1%;
+                margin-right: 1%;*/
+                /*padding-left: 1%;
+                padding-right: 1%;*/
 
             }
+            .sec-title {
+                padding-left: 1%;
+                padding-top: 1%;
+            }
+            #sec2 img {
+                /*width: 80%;*/
+                height: auto;
+                display: block;
 
-            /*#writing-pg1 {
-                position: absolute;
-                top: 10%;
-                left: 5%;
-            }*/
+                align-self: center;
 
-            #writing-header {
-                position: absolute;
-                top: 10%;
-                left: 5%;
+                box-sizing: border-box;
+                /*margin: 1%;*/
+
+                width: 100%;
+            }
+            .a-img-center {
+                align-self: center;
+                display: flex;
+                /*width: 100%;*/
+                width: auto;
+                justify-content: center;
+
+                width: 80%;
+
+            }
+            .sec2-text {
+                box-sizing: border-box;
+                margin-top: 1%;
+                margin-bottom: 3%;
+                /*margin: 2%;*/
+                display: flex;
+                flex-direction: column;
+            }
+            .sec2-text-not-final {
+                margin-bottom: 7%;
+            }
+
+            #sec3 {
+                /*height: 100vh;*/
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                /*padding: 1%;*/
+
+                padding-bottom: 5vh;
+
+
+            }
+            #sec3-row {
+                height: 100%;
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+            }
+            #sec3 img {
+                box-sizing: border-box;
+                width: 100%;
+                height: auto;
                 
-            }
+                display: box;
 
-            #menucont {
-                position: absolute;
-                left: 5%;
-                /*top: 42%;*/
-                top: 44%;
-            }
-
-
-
-            
-
-            .menu {
-                opacity: 100%;
-                font-size: 15px;
-                font-weight: 50;
-                letter-spacing:.01cm;
-                /*font-family:'Times New Roman', Times, serif;*/
-                /*font-family: "brandon-grotesque", sans-serif;*/
-                /*font-family: 'Garamond';*/
-                font-weight: 200;
-                font-style: normal;
-            }
-
-            #writing-header {
-                /*font-family: 'Garamond';*/
-                font-weight: 500;
-                font-size: 35px;
-            }
-
-            #page1 hr {
-                width: 75%;
                 align-self: center;
             }
+            .sec3-elem {
+                box-sizing: border-box;
+                width: 50%;
 
-            #footer {
-                margin-top: 9%;
+
+                padding: 1%;
+                padding-top: 2%;
+
+                display: flex;
+                flex-direction: column;
+
+                flex: 1;
+                box-sizing: border-box;
+                min-width: 0;
             }
 
-            #footer p {
-                position: absolute;
-                margin-bottom: 500px;
-                margin-left: 12.5%;
-                /*height: 100%;*/
-                margin-top: 0;
+            #sec4 {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
             }
-
-            #icon {
-                display: none;
-            }
-
-
-
-
-
-
-
-
-            /*resize for phone*/
             
-            @media screen and (max-width: 800px) {
+            #sec4 img {
+                box-sizing: border-box;
+                width: 100%;
 
-                .body {
-                    cursor: default;
-                }
-                .square {
-                    border: none;
-                }
+                display: box;
+            }
+            
+            .sec4-row {
+                width: 100%;
+                /*height: 75vh;*/
 
-                #page1 {
-                    height: 100vh;
-                }
-                
-                #writing-pg1 {
-                    height: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+            .sec4-item {
+                width: 20%;
+                height: 100%;
+                box-sizing: border-box;
 
-                    position: static;
-                }
+                padding: 1.5%;
 
-                #top-phone {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    margin-top: 8%;
-                }
+                display: flex;
+                flex-direction: column;
 
-                #span-cont {
-                    width: 50%;
-                    /*height: 100%;*/
-                    height: 60px;
-                    display: flex;
-                    align-items: center;
+                margin-bottom: 6vw;
 
-                    justify-content: right;
-                    margin-right: 5%;
-                    
+                /*justify-content: flex-end*/
+            }
 
-                }
 
-                #icon {
-                    font-size: 60px;
 
-                    line-height: 30px;
 
-                    cursor: pointer;
-                    font-weight: 300;
-                    z-index: 6;
-                    display: inline-block;
-                    /*color: white;*/
 
-                    transition: 0.5s; /*the JS rotation!*/
-                }
-
-                #menucont {
-                    background-color: black;
-                    color: white;
-                    position: absolute;
-                    height: 100vh;
-                    width: 100vw;
-                    top: 50%;
-                    left: -50%; /*CHANGE. MADE POSITIVE TO SEE IT EASILY*/
-                    transform: translate(-50%, -50%);
-                    transition: 0.5s ease-out;
-                    list-style-type: none;
-                    display: flex;
+            @media only screen and (max-width: 800px) {
+                #sec1 {
                     flex-direction: column;
-                    align-items: flex-start;
-                    /*justify-content: bottom;*/
-                    padding-left: 10%;
-                    padding-top: 95%;
-                    z-index: 5;
-                    
-
-                    
                 }
-                
-                #menucont a {
-                    color: white;
+                .sec1-elem {
+                    width: 100%;
+                    padding-bottom: 3%;
                 }
-
-                .menu {
-                    position: relative;
-                    overflow: hidden;
-                    cursor: pointer;
-
-                    font-size: 40px;
-                    line-height: 45px;
-                    padding: 0;
-                    margin: 0;
-                }
-
-
-                /*I THINK THIS IS JUST FOR THEIR DESIGN*/
-                
-                .menu::before {
-                    position: absolute;
-                    transition: 0.5s ease-out;
-                }
-                .menu:hover::before {
-                    transform: scale(15);
-                }
-                
-
-
-
-
-
-
-
-
-
-                
-
-
-
-                #writing-header {
-                    /*making sure the settings from laptop aren't affecting it*/
-                    top: 0;
-                    left: 0;
-                    margin-top: 0;
-                    margin-bottom: 0;
-
-                    position: static;
-                    /*height: 10%;*/ /*CHANGED THIS MIGHT BE WEIRD*/
-                    font-size: 30px;
-                    font-weight: 300;
-                    margin-left: 5%;
-
-
-                }
-
-                #writing-pg1 img {
-                    padding-top:0;
+                #sec1-anim img { /*Same properties will transfer to animation*/
                     width: 90%;
-                    margin-left: 5%;
-                    
-                    margin-top: 100%;
+                    height: auto;
+                }
+                #sec1-elem2 {
+                    padding-top: 5%;
+                }
+                #hr-writing {
+                    width: 98vw;
+                    height: .5px;
+                }
+                #sec2 img {
+                    width: 100%;
                 }
 
-                #footer {
-                    margin-bottom: 40%;
+                #sec3-row {
+                    flex-direction: column;
                 }
-                #footer hr {
-                    width: 90%;
-                    margin-left: 5%;
+                .sec3-elem {
+                    width: 100%;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
                 }
-                #footer p {
-                margin-left: 5%;
+                #sec3 img {
+                    width: 100%;
+                    align-self: center;
+                    justify-self: center;
+                }
+                .sec4-row {
+                    flex-direction: column;
+                }
+                .sec4-item {
+                    width: 100%;
+                }
             }
-                
-            }
-                
-
+            
+            
+            
             
 
 
 
-
-
-
-
-
+            
         </style>
+        
     </head>
     <body>
 
-        <div class="cursors square" data-cursor-dot></div>
+        <div id="page">
+            <div id="sec1">
+                <div class="sec1-elem" id="sec1-anim">
+                    <img src="img/deGaulle_square.jpg">
+                </div>
+                <div class="sec1-elem" id="sec1-elem2">
+                    <h2>Anna Prenowitz's website</h2>
+                    <br>
+                    <a href="mailto:annaprenowitz@gmail.com"><p>annaprenowitz@gmail.com</p></a>
+                    <p>New York, NY</p>
+                </div>
+                
+                <div class="sec1-elem">
+                    <p>Anna is studying literature and physics, but has a bunch of fun hobbies too. She likes showing people stuff what she likes. This is where that stuff is.</p>
+                    <p>Anna is interested in the relationship between people and technologies and between a work of art and its aura and a thought and its representation.</p>
+                </div>
 
-        <div id="page1">
-            <div id="writing-pg1">
-                <div id="top-phone"><p id="writing-header">Anna<br>Prenowitz</p><div id="span-cont"><span id="icon" onclick="menucont(this)">+</span></div></div>
-                <img id="img_pg1" src="images/bathroom_43[edited].jpg">
-                <div id="menucont">
-                    <!--<p class="menu"><a href="writing.html">Writing</a></p>-->
-                    <p class="menu"><a href="streets.html">Photography</a></p>
-                    <!--<p class="menu"><a href="video2.html">Film</a></p>-->
-                    <p class="menu"><a href="coming_soon.html">Film</a></p>
-                    <!--<p class="menu"><a href="web_design4.html">Web design</a></p>-->
-                    <!--<p class="menu"><a href="../../../../important things/CVs/2024 july/artistic/Anna Prenowitz Artistic Resume.pdf">Artistic resume</a></p>-->
+                <hr id="hr-writing">
+
+                <div class="sec1-elem">
+                    <h2><a href="writing.html">Writing</a></h2>
+                    <br>
+                    <p><a href="writing.html#index-1">Academic</a></p>
+                    <p><a href="writing.html#index-1">Why are we scared of AI? 2025. Published in Machina et EI, Cornell University Press.</a></p>
+                    <p><a href="writing.html#index-1">The Language of Theatre, 2025.</a></p>
+                    <br>
+                    <br>
+                    
+                    
+                    <p><a href="writing.html#index-2">Prose</a></p>
+                    <p><a href="writing.html#index-2">Eleanor Okitana, 2025. Published in The Gallatin Review.</a></p>
+                    <br>
+                    <br>
+                    <p><a href="writing.html#index-3">Theatre</a></p>
+                    <p><a href="writing.html#index-3">Popsicle, 2025. Performed at Brandspankin' New Works Festival, New York, NY.<!-- A short play about a group of friends and the adventure they undertake when they decide to commit a crime.--></a></p>
+                    <p><a href="writing.html#index-3">An Evening With Mary Ann, 2024.<!-- One-woman show about a woman working herself up as she waits for her children to arrive for dinner.--></a></p>
+                    <!--<br>
+                    <br>
+                    <p>Criticism</p>
+                    <br>
+                    <p><a href="#">Universal Language film review, 2025. Published in Static.</a></p>
+                    <p><a href="#">FKA Twigs show review, 2025. Published in Static.</a></p>
+                    -->
                 </div>
             </div>
-            <div id="footer">
-                <hr>
-                <p><a href="mailto:annaprenowitz@gmail.com">Email me.</a></p>
+            <hr>
+            <div id="sec2">
+                <h2 class="sec2-text">Film</h2>
+                <a class="a-img-center" href="film_amaranta's_death.html"><img src="img/DSC00245.JPG"></a>
+                <div class="sec2-text sec2-text-not-final">
+                    <p><a href="film_amaranta's_death.html">Amaranta's Death</a></p>
+                    <br>
+                    <p class="light"><a href="film_amaranta's_death.html">July, 2024</a></p>
+                    <p class="light"><a href="film_amaranta's_death.html">Written, dir. Anna Prenowitz</a></p>
+                    <br>
+                    <p><a href="film_amaranta's_death.html">A short film loosely based on one short page in Gabriel García Márquez's epic, One Hundred Years of Solitude.</a></p>
+                </div>
+
+                <a class="a-img-center" href="film_eviction.html"><img src="img/still_bedroom2.png"></a>
+                <div class="sec2-text">
+                    <p><a href="film_eviction.html">Eviction</a></p>
+                    <br>
+                    <p class="light"><a href="film_eviction.html">June, 2025</a></p>
+                    <p class="light"><a href="film_eviction.html">Written and directed by Kate Aizin and Anna Prenowitz</a></p>
+                    <p class="light"><a href="film_eviction.html">Starring Kate Aizin</a></p>
+                    <br>
+                    <p><a href="film_eviction.html">A short film loosely based on one short page in Gabriel García Márquez's epic, One Hundred Years of Solitude.</a></p>
+                </div>
+            </div>
+            
+            <hr>
+            <!--
+            <div id="sec3">
+                <h2 class="sec-title">Animation</h2>
+                <div id="sec3-row">
+                    <div class="sec3-elem">
+                        <a class="a-img-center" href="#"><img src="img/DSC08797.JPG"></a>
+                        <br>
+                        <a href="#"><p>Some text is here.</p></a>
+                        <a href="#"><p>And a year.</p></a>
+                        <br>
+                        <a href="#"><p>2025</p></a>
+                    </div>
+                    <div class="sec3-elem">
+                        <a class="a-img-center" href="#"><img src="img/DSC08797.JPG"></a>
+                        <br>
+                        <a href="#"><p>Some text is here.</p></a>
+                        <a href="#"><p>And a year.</p></a>
+                        <br>
+                        <a href="#"><p>2025</p></a>
+                        <a href="#"><p>ISBN 25389572380532002</p></a>
+                        <a href="#"><p>ISBN 25389572380532002</p></a>
+                        <a href="#"><p>ISBN 25389572380532002</p></a>
+                        <br>
+                        <a href="#"><p>ISBN 25389572380532002</p></a>
+                        <a href="#"><p>Product not found.</p></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            -->
+            <div id="sec4">
+                <div class="sec4-row"><!--use short-row when only horiz images are used.-->
+                    <div id="sec4-item1" class="sec4-item">
+                        <h2>Photos</h2>
+                    </div>
+                    <a href="photos_brandamburg.html" class="sec4-item">
+                        <img src="img/DSC08691.JPG">
+                        <br>
+                        <p>Brandamburg Concert</p>
+                        <p>Brandamburg, Germany. 2025</p>
+                        <br>
+                        <br>
+                        <p>Collection of 7 images</p>
+                        <p>Color</p>
+                        <p>7008 x 4672</p>
+                    </a>
+                    <a href="photos_new_york.html" class="sec4-item">
+                        <img src="img/DSC00555.JPG">
+                        <br>
+                        <p>New York Streets</p>
+                        <p>New York, USA. 2024</p>
+                        <br>
+                        <br>
+                        <p>Collection of 3 images</p>
+                        <p>Color</p>
+                        <p>7008 x 4672</p>
+                    </a>
+                    <a href="photos_cambodia_thailand.html" class="sec4-item">
+                        <img src="img/statue.jpg">
+                        <br>
+                        <p>Cambodia & Thailand</p>
+                        <p>2025</p>
+                        <br>
+                        <br>
+                        <p>Collection of 5 images</p>
+                        <p>Color</p>
+                        <p>7008 x 4672</p>
+                    </a>
+                    <a href="photos_holi.html" class="sec4-item">
+                        <img src="img/Holi2025_2.jpg">
+                        <br>
+                        <p>Holi Celebrations</p>
+                        <p>New York, NY. 2025</p>
+                        <p>Photo essay published in Washington Square News.</p>
+                        <br>
+                        <br>
+                        <p>Collection of 13 images</p>
+                        <p>Color</p>
+                        <p>7008 x 4672</p>
+                    </a>
+                    
+
+
+                </div>
+
+
+
+                <div class="sec4-row">
+                    <a href="photos_soleil.html" class="sec4-item">
+                        <img src="img/cuisine2.jpg">
+                        <br>
+                        <p>Theatre du Soleil</p>
+                        <p>Paris, France</p>
+                        <br>
+                        <br>
+                        <p>Collection of 7 images</p>
+                        <p>Color</p>
+                        <p>7008 x 4672</p>
+                    </a>
+                    <a href="photos_met_opera.html" class="sec4-item">
+                        <img src="img/DSC07519.jpg">
+                        <br>
+                        <p>Metropolitan Opera</p>
+                        <p>New York, USA</p>
+                        <br>
+                        <br>
+                        <p>Collection of 7 images</p>
+                        <p>Color</p>
+                        <p>7008 x 4672</p>
+                    </a>
+                    <a href="photos_komische_oper.html" class="sec4-item">
+                        <img src="img/DSC04243.JPG">
+                        <br>
+                        <p>Komische Oper Costume Sale</p>
+                        <p>Berlin, Germany</p>
+                        <br>
+                        <br>
+                        <p>Collection of 6 images</p>
+                        <p>19.6.2025</p>
+                        <p>7008 x 4672</p>
+                    </a>
+                    <!--
+                    <a href="photos_leeds_carnival.html" class="sec4-item">
+                        <img src="img/P8284956.JPG">
+                        <br>
+                        <p>Leeds Carnival</p>
+                        <p>Leeds, England</p>
+                        <br>
+                        <br>
+                        <p>Collection of 3 images</p>
+                        <p>28.8.2023</p>
+                        <p>5184 x 3888</p>
+                    </a>
+                    -->
+                    
+                </div>
             </div>
         </div>
 
-
-
-
-
-        <!--JavaScript!-->
         <script>
-
-            const cursorDot = document.querySelector("[data-cursor-dot]");
-            const cursorTriangle = document.querySelector("[data-cursor-triangle]");
-            window.addEventListener("mousemove", function(e) {
-                const posX = e.clientX;
-                const posY = e.clientY;
-
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
-
-                cursorTriangle.style.left = `${posX}px`;
-                cursorTriangle.style.top = `${posY}px`;
-            })
-
-
-
-
-            /*
-            const dropdownBtn = document.querySelector(".dropdown-btn");
-            const dropdownContent = document.querySelector(".dropdown-content");
-
-            dropdownBtn.addEventListener("click", () => {
-                dropdownContent.classList.toggle("menu-open");
-                dropdownBtn.setAttribute("aria-expanded",dropdownBtn.getAttribute("aria-expanded") === "true" ? "false" : "true");
-            });
-            */
-
-            function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", reveal);
-
-
-
-
-        // reveal menu on phone
-        var x=0;
-        var element = document.getElementById("menucont");
-        function menucont(icon) {
-            if(x==0) {
-                icon.style.transform = "rotate(45deg)";
-                element.style.left = '50%';
-                icon.style.color = "white";
-                x=1;
-            }
-            else {
-                icon.style.transform = "rotate(0deg)";
-                element.style.left = '-50%';
-                icon.style.color = "black";
-                x=0;
-            }
-        }
-
-
-
-
-
+            
         </script>
-
+            
     </body>
-
-
-
-
-
 </html>
-
-

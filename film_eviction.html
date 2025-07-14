@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Anna Prenowitz — Eviction</title>
+        <link rel="icon" href="img/deGaulle.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://use.typekit.net/gjh3whg.css">
+        <style>
+            html {
+                overflow-x: hidden;
+            }
+            body {
+                overflow-x: hidden;
+                padding: 0;
+                margin: 0;
+                font-family: "neue-haas-grotesk-display", sans-serif;
+                
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-weight: 500;
+                font-style: normal;
+                font-size: .64em;
+                letter-spacing: .05em;
+                margin: 0;
+                margin-bottom: .3em;
+
+                
+
+                display: inline-block;
+            }
+            h2 {
+                font-weight: 400;
+                font-style: normal;
+                /*font-size: .75em;*/
+
+                font-size: 1em;
+                letter-spacing: .05em;
+                margin: 0;
+                margin-bottom: 0.3em;
+            }
+            /*
+            hr {
+                width: 98vw;
+                height: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            */
+            #hr-vert {
+                position: fixed;
+                /*margin-left: 45vh;*/
+                margin-left: 25vw;
+                height: 98vh;
+                width: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            #hr-horiz-75 {
+                width: 98%;
+                height: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            #hr-horiz-25 {
+                width: 94%;
+                height: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            #page {
+                overflow: hidden;
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+            }
+            
+            #sec1 {
+                height: 100%;
+                width: 25%;
+                position:fixed;
+
+                /*background-color: white;*/
+
+            }
+
+            #sec1-text {
+                margin-left: 4%;
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            #sec2 {
+
+                /*height: 500vh;*/
+                width: 75%;
+
+                margin-left: 25vw;
+                padding-bottom: 2vh;
+                /*display: flex;*/
+
+                /*background-color: green;*/
+            }
+            
+            .menu {
+                height: 10vh;
+                padding-top: 1vh;
+                display: flex;
+            }
+            #menu-25 {
+                padding-left: 3%;
+            }
+            #menu-75 {
+                padding-left: 1%;
+
+            }
+            #menu-75 p {
+                /*width: 33.3%;*/
+                flex: 1;
+            }
+
+            #sec2-img {
+                display: flex;
+                flex-direction: column;
+                /*align-content: center;*/
+                align-items: center;
+                /*justify-content: center;*/
+                /*justify-items: center;*/
+            }
+
+            #sec2 img {
+                width: 97%;
+                height: auto;
+                /*align-self: center;
+                justify-self: center;*/
+            }
+
+
+
+
+            @media only screen and (max-width: 800px) {
+                
+                .menu {
+                    display: none;
+                }
+                #page {
+                    flex-direction:column;
+                    margin-top: 3%;
+                }
+                #sec1 {
+                    position: static;
+                    width: 100%;
+                }
+                hr {
+                }
+                #sec2 {
+
+                width: 100%;
+                margin-left: 0;
+                }
+                .disappear {
+                    display: none;
+                }
+            }
+            
+            
+            
+
+
+
+            
+        </style>
+        
+    </head>
+    <body>
+
+        <div id="page">
+            <div id="sec1">
+                <div class="menu" id="menu-25">
+                    <p><a href="index.html">HOME</a></p></div>
+                <hr class="disappear" id="hr-horiz-25">
+                <div id="sec1-text">
+                    <p>Eviction</p>
+                    <p>June, 2025</p>
+                    <br>
+                    <p>Written by Kate Aizin</p>
+                    <p>Starring Kate Aizin</p>
+                    <p>Directed by Anna Prenowitz, Kate Aizin</p>
+                    <p>Videography by Anna Prenowitz</p>
+                    <br>
+                    <p>A short film about a girl's neighbour. A short film about a girl's neighbour. A short film about a girl's neighbour. A short film about a girl's neighbour. A short film about a girl's neighbour.</p>
+                </div>
+                
+            </div>
+            <hr class="disappear" id="hr-vert">
+            <div id="sec2">
+                <div class="menu" id="menu-75">
+                    <p><a href="writing.html">WRITING</a></p>
+                    <p><a href="#">COMING SOON</a></p>
+                    <p><a href="photos_brandamburg.html">PHOTOS</a></p>
+                </div>
+                <div id="sec2-img">
+                    <hr id="hr-horiz-75">
+                    <img src="img/still_bedroom.png">
+                    <hr id="hr-horiz-75">
+                    <img src="img/still_staircase.png">
+                    <hr id="hr-horiz-75">
+                    <img src="img/still_door.png">
+                </div>
+                
+            </div>
+
+            
+        </div>
+
+        <script>
+            
+        </script>
+            
+    </body>
+</html>

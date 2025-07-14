@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Anna Prenowitz — Writing</title>
+        <link rel="icon" href="img/deGaulle.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://use.typekit.net/gjh3whg.css">
+        <style>
+            html {
+                overflow-x: hidden;
+            }
+            body {
+                overflow-x: hidden;
+                padding: 0;
+                margin: 0;
+                font-family: "neue-haas-grotesk-display", sans-serif;
+                
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-weight: 600;
+                font-style: normal;
+                font-size: .69em;
+                letter-spacing: .05em;
+                margin: 0;
+                margin-bottom: .3em;
+
+                
+
+                display: inline-block;
+            }
+            h2 {
+                font-weight: 400;
+                font-style: normal;
+                /*font-size: .75em;*/
+
+                font-size: 1em;
+                letter-spacing: .05em;
+                margin: 0;
+                margin-bottom: 0.3em;
+            }
+            ol {
+                margin:0;
+                padding:0;
+            }
+
+            
+
+            .zero-padded {
+                counter-reset: item;
+                list-style: none;
+                /*padding-left: 2em;*/
+                
+
+            }
+
+            .zero-padded li {
+                counter-increment: item;
+                position: relative;
+
+
+                /*styling*/
+                font-weight: 800;
+                font-style: normal;
+                font-size: .64em;
+                letter-spacing: .05em;
+                margin: 0;
+                margin-bottom: .3em;
+            }
+
+            .zero-padded li::before {
+                content: counter(item, decimal-leading-zero) ". ";
+                position: absolute;
+                left: -2em;
+            }
+            /*
+            hr {
+                width: 98vw;
+                height: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            */
+            #hr-vert {
+                position: fixed;
+                /*margin-left: 45vh;*/
+                margin-left: 25vw;
+                height: 98vh;
+                width: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            #hr-horiz-75 {
+                width: 98%;
+                height: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            #hr-horiz-25 {
+                width: 94%;
+                height: .5px;
+                border: none;
+                background-color: rgb(168, 167, 167);
+                box-sizing: border-box;
+            }
+            #page {
+                overflow: hidden;
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+
+                margin-bottom: 1%;
+            }
+            
+            #sec1 {
+                height: 100%;
+                width: 58%;
+                position:fixed;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+
+            }
+            #sec1 p {
+                margin:0;
+                padding:0;
+            }
+
+            .sec1-row {
+                width: 50%;
+                margin-left: 2%;
+
+                
+                display: flex;
+                flex-direction: row;
+
+
+
+                line-height:.8;
+            }
+            #sec1-row1 {
+                margin-top: 1%;
+            }
+            #sec1-index {
+                width: 10%;
+                margin:0;
+                padding:0;
+            }
+            #sec1-text {
+                margin:0;
+                padding:0;
+            }
+            
+            #menu {
+                display: flex;
+                flex-direction: row;
+                
+                margin-bottom: 2vh;
+                margin-left: 2vh;
+            }
+            #menu a {
+                display: inline-block;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            
+
+            
+
+            #sec2 {
+
+                /*height: 500vh;*/
+                width: 40%;
+
+                margin-left: 58vw;
+                /*display: flex;*/
+
+                display: flex;
+                flex-direction: column;
+
+            }
+            
+            
+
+            #sec2-row1 {
+                /*width: 72%;
+                margin-left: 25%;*/
+                margin-top: 2%;
+                
+            }
+
+            .sec2-row {
+                display: flex;
+                flex-direction: row;
+
+                margin-bottom: 10%;
+
+                justify-content: flex-end;
+
+            }
+            .sec2-row-img {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+            }
+            .sec2-row-above-img {
+                display: flex;
+                flex-direction: row;
+
+            }
+            .index-num {
+                width: 25%;
+                padding-top:0;
+                padding-left: 1%;
+            }
+
+            .sec2-cont {
+                width: 75%;
+                display: flex;
+                flex-direction: column;
+                /*align-items: center;*/
+                padding-top:1%;
+
+            }
+            #top-para {
+                
+            }
+            .img-cont {
+                width: 75%;
+                display: flex;
+                flex-direction: column;
+                align-self: flex-end;
+                justify-self: flex-end;
+                /*align-items: center;*/
+                padding-top:1%;
+
+            }
+
+            .col-cont {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+            .col {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #sec2 img {
+                width: 100%;
+                height: auto;
+            }
+
+            .light {
+                font-weight: 100;
+                /*color: red;*/
+            }
+
+            @media only screen and (max-width: 800px) {
+                #sec1 {
+                    display: none;
+                }
+                #sec2 {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .img-cont {
+                    width: 100%;
+                    align-self: center;
+                    justify-self: center;
+                    padding-top:1%;
+                    padding: 1%;
+                }
+
+                #top-para {
+                    width:100%;
+                    margin: 1%;
+                }
+                .sec2-row {
+                    
+                    justify-content: flex-start;
+
+                }
+                .disappear {
+                    display: none;
+                }
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+
+        <div id="page">
+            <div id="sec1">
+                <div>
+                    <div class="sec1-row" id="sec1-row1">
+                        <div id="sec1-index"><p></p></div>
+                        <div id="sec1-text"><p>Index</p></div>
+                    </div>
+                    <br>
+                    <div class="sec1-row">
+                        <div id="sec1-index"><p><a href="#index-1">01.</a></p></div>
+                        <div id="sec1-text"><p><a href="#index-1">Academic</a></p></div>
+                    </div>
+                    <div class="sec1-row">
+                        <div id="sec1-index"><p><a href="#index-2">02.</a></p></div>
+                        <div id="sec1-text"><p><a href="#index-2">Prose</a></p></div>
+                    </div>
+                    <div class="sec1-row">
+                        <div id="sec1-index"><p><a href="#index-3">03.</a></p></div>
+                        <div id="sec1-text"><p><a href="#index-3">Theatre</a></p></div>
+                    </div>
+                    <!--<div class="sec1-row">
+                        <div id="sec1-index"><p><a href="#index-4">04.</a></p></div>
+                        <div id="sec1-text"><p><a href="#index-4">Criticism</a></p></div>
+                    </div>-->
+                </div>
+                <div id="menu">
+                    <p><a href="index.html">Home</a></p>
+                    <p>|</p>
+                    <p><a href="film_amaranta's_death.html">Film</a></p>
+                    <p>|</p>
+                    <p><a href="#">Coming soon</a></p>
+                    <p>|</p>
+                    <p><a href="photos_brandamburg.html">Photos</a></p>
+                </div>
+                
+                
+                
+                <!--<ol id="sec1-text" class="zero-padded">
+                    <li>Amaranta's Death</li>
+                    <li>July, 2024</li>
+                    <li>Written, dir. Anna Prenowitz</li>
+                    <li>A short film.</li>
+                </ol>-->
+                
+            </div>
+            <div id="sec2">
+                <div class="sec2-row" id="sec2-row1">
+                    <!--<div class="index-num"></div>-->
+                    <div class="sec2-cont" id="top-para">
+                        <p>Since taking a creative writing class and being forced (by choice) to write creatively, Anna has been writing and has realised it is really hard to write.</p>
+                        <br>
+                        <p>Here are some examples of things she has written and enjoyed writing recently.</p>
+                        <br>
+                        <p>annaprenowitz@gmail.com</p>
+                        <p>New York, NY</p>
+                    </div>
+                </div>
+
+                <div class="sec2-row-above-img">
+                    <div class="index-num" id="index-1"><p>01.</p></div>
+                    <div class="sec2-cont">
+                        <p>AI as Reproduction</p>
+                        <br>
+                        <div class="col-cont">
+                            <div class="col">
+                                <p class="light">Mechanema: Humanities and AI</p>
+                                <p class="light">English</p>
+                                <p class="light">2025</p>
+                                
+                            </div>
+                            <div class="col">
+                                <p class="light">Cornell University Press</p>
+                                <p class="light">ISBN: 5237897383290</p>
+                                <p class="light">Paperback, 23x12</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--Could do 2 small cols with size, ISBN-->
+                        <br>
+                        <p>Short text on how Walter Benjamin's reproduction and artwork made for reproduction are relevant to us with the revolution of AI.</p>
+                        <br>
+                    </div>
+                </div>
+                <!--<div class="sec2-row-img">
+                    <div class="index-num disappear"><p></p></div>
+                    <div class="img-cont">
+                        <img src="img/DSC00245.JPG">
+                        <img src="img/DSC00245.JPG">
+                    </div>
+                </div>-->
+
+
+
+
+                <br><br>
+
+
+
+
+                
+
+                <div class="sec2-row-above-img">
+                    <div class="index-num"><p></p></div>
+                    <div class="sec2-cont">
+                        <p>Language of Theatre</p>
+                        <br>
+                        <div class="col-cont">
+                            <div class="col">
+                                <p class="light">Dean's Award for Summer Research</p>
+                                <p class="light">New York University</p>
+                                
+                            </div>
+                            <div class="col">
+                                <p class="light">English</p>
+                                <p class="light">2025</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--Could do 2 small cols with size, ISBN-->
+                        <br>
+                        <p>Research paper and photo essay on the contemporary traditions of theatre in France.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="sec2-row-img">
+                    <div class="index-num disappear"><p></p></div>
+                    <div class="img-cont">
+                        <img src="img/DSC04243.JPG">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <br><br>
+
+
+
+
+
+
+                
+
+                <div class="sec2-row-above-img">
+                    <div class="index-num" id="index-2"><p>02.</p></div>
+                    <div class="sec2-cont">
+                        <p>Eleanor Okitana</p>
+                        <br>
+                        <div class="col-cont">
+                            <div class="col">
+                                <p class="light">The Gallatin Review</p>
+                                <p class="light">New York University</p>
+                                
+                            </div>
+                            <div class="col">
+                                <p class="light">English</p>
+                                <p class="light">2025</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--Could do 2 small cols with size, ISBN-->
+                        <br>
+                        <p>Short story about a woman's escape.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="sec2-row-img">
+                    <div class="index-num disappear"><p></p></div>
+                    <div class="img-cont">
+                        <img src="img/TGR.jpg">
+                    </div>
+                </div>
+
+
+
+
+
+                <br><br>
+
+
+
+
+
+
+
+
+
+                <div class="sec2-row-above-img">
+                    <div class="index-num" id="index-3"><p>03.</p></div>
+                    <div class="sec2-cont">
+                        <p>Popsicle</p>
+                        <br>
+                        <div class="col-cont">
+                            <div class="col">
+                                <p class="light">Brandpankin' New Works Festival</p>
+                                <p class="light">New York University</p>
+                                
+                            </div>
+                            <div class="col">
+                                <p class="light">English</p>
+                                <p class="light">2025</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--Could do 2 small cols with size, ISBN-->
+                        <br>
+                        <p>Play on a group of children and their escape from the law. Play on a group of children and their escape from the law. Play on a group of children and their escape from the law. Play on a group of children and their escape from the law. Play on a group of children and their escape from the law.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="sec2-row-img">
+                    <div class="index-num disappear"><p></p></div>
+                    <div class="img-cont">
+                        <!--<img src="img/DSC00245.JPG">
+                        <img src="img/DSC00245.JPG">-->
+                    </div>
+                </div>
+
+
+
+
+
+                <br><br>
+
+
+
+
+
+
+
+
+
+                <div class="sec2-row-above-img">
+                    <div class="index-num"><p></p></div>
+                    <div class="sec2-cont">
+                        <p>An Evening With Mary Ann</p>
+                        <br>
+                        <div class="col-cont">
+                            <div class="col">
+                                <p class="light">Brandpankin' New Works Festival</p>
+                                <p class="light">New York University</p>
+                                
+                            </div>
+                            <div class="col">
+                                <p class="light">English</p>
+                                <p class="light">2025</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--Could do 2 small cols with size, ISBN-->
+                        <br>
+                        <p>Short text on how Walter Benjamin's reproduction and artwork made for reproduction are relevant to us with the revolution of AI.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="sec2-row-img">
+                    <div class="index-num disappear"><p></p></div>
+                    <div class="img-cont">
+                        <!--<img src="img/DSC00245.JPG">
+                        <img src="img/DSC00245.JPG">-->
+                    </div>
+                </div>
+                
+                
+                
+                
+
+                
+                
+                
+            </div>
+
+            
+        </div>
+
+        <script>
+            
+        </script>
+            
+    </body>
+</html>
