@@ -98,6 +98,9 @@
 
                 padding-bottom: 15vh; /*Just for writing column*/
             }
+            .sec1-sub-elem {
+                margin-top: 5%;
+            }
             #sec1-anim {
                 /*height: 60vh;*/
                 /*min-height: 100%;*/
@@ -254,34 +257,83 @@
             /*@media only screen and (max-width: 800px) {*/
             @media only screen and (max-width: 1100px) {
                 p {
-                    font-size: 3em;
+                    font-size: 1.8em;
+                    font-weight: 700;
                 }
                 h2 {
-                    font-size: 3em;
+                    font-size: 1.8em;
+                    font-weight: 700;
+                    margin-bottom: 5%;
                 }
                 #page {
-                    margin: 1em;
+                    /*margin: 1em;*/
+                }
+                .sec {
+                    margin-top: 8%;
+                    margin-bottom: 6%;
+
                 }
                 #sec1 {
                     flex-direction: column;
                 }
                 .sec1-elem {
-                    width: 100%;
+                    width: 95%;
                     padding-bottom: 3%;
+                    align-self: center;
+                }
+                .sec1-sub-elem {
+                    margin-top: 8%;
+                    /*margin-bottom: 5%;*/
+
+                    display: flex;
+                    flex-direction: column;
+                }
+                #sec1-anim {
+                    margin-top: 8%;
+                    margin-bottom: 15%;
+                    width: 100%;
+                }
+                #writing-title {
+                    margin-bottom: 1%;
                 }
                 #sec1-anim img { /*Same properties will transfer to animation*/
                     width: 90%;
                     height: auto;
                 }
+                #hr-writing { /*Doesn't seem to show up here*/
+                    margin-top: 6%;
+                    margin-bottom: 8%;
+                }
                 #sec1-elem2 {
                     padding-top: 5%;
+                    padding-bottom: 10%;
                 }
+
+
+
+
+                
+
+
+
                 #hr-writing {
                     width: 98vw;
                     height: .5px;
                 }
+                .a-img-center {
+                    width: 95%;
+                }
                 #sec2 img {
                     width: 100%;
+                }
+
+                #sec2-title {
+                    margin-bottom: 8%;
+                }
+
+                .sec2-text {
+                    width: 95%;
+                    align-self: center;
                 }
 
                 #sec3-row {
@@ -302,7 +354,12 @@
                     flex-direction: column;
                 }
                 .sec4-item {
-                    width: 100%;
+                    width: 95%;
+                    align-self: center;
+                }
+
+                #sec4-item1 {
+                    margin-bottom: 1%;
                 }
             }
             
@@ -319,7 +376,7 @@
     <body>
 
         <div id="page">
-            <div id="sec1">
+            <div id="sec1" class="sec">
                 <div class="sec1-elem" id="sec1-anim">
                     <!--<img src="img/deGaulle_square.jpg">-->
                     <img src="img/elephant.png">
@@ -339,22 +396,28 @@
                 <hr id="hr-writing">
 
                 <div class="sec1-elem">
-                    <h2><a href="writing.html">Writing</a></h2>
-                    <br>
-                    <p><a href="writing.html#index-1">Academic</a></p>
-                    <p><a href="writing.html#index-1">AI as Reproduction, 2025. To be published in Mechanima: Humanities and AI, Cornell University Press.</a></p>
-                    <p><a href="writing.html#index-1">The Language of Theatre, 2025.</a></p>
-                    <br>
-                    <br>
+                    <h2 id="writing-title"><a href="writing.html">Writing</a></h2>
+                    <!--<br>-->
+
+                    <div class="sec1-sub-elem">
+                        <p><a href="writing.html#index-1">Academic</a></p>
+                        <p><a href="writing.html#index-1">AI as Reproduction, 2025. To be published in Mechanima: Humanities and AI, Cornell University Press.</a></p>
+                        <p><a href="writing.html#index-1">The Language of Theatre, 2025.</a></p>
+                    </div>
+                    <!--<br>
+                    <br>-->
                     
-                    
-                    <p><a href="writing.html#index-2">Prose</a></p>
-                    <p><a href="writing.html#index-2">Eleanor Okitana, 2025. Published in The Gallatin Review.</a></p>
-                    <br>
-                    <br>
-                    <p><a href="writing.html#index-3">Theatre</a></p>
-                    <p><a href="writing.html#index-3">Popsicle, 2025. Performed at Brandspankin' New Works Festival, New York, NY.<!-- A short play about a group of friends and the adventure they undertake when they decide to commit a crime.--></a></p>
-                    <p><a href="writing.html#index-3">An Evening With Mary Ann, 2024.<!-- One-woman show about a woman working herself up as she waits for her children to arrive for dinner.--></a></p>
+                    <div class="sec1-sub-elem">
+                        <p><a href="writing.html#index-2">Prose</a></p>
+                        <p><a href="writing.html#index-2">Eleanor Okitana, 2025. Published in The Gallatin Review.</a></p>
+                    </div>
+                    <!--<br>
+                    <br>-->
+                    <div class="sec1-sub-elem">
+                        <p><a href="writing.html#index-3">Theatre</a></p>
+                        <p><a href="writing.html#index-3">Popsicle, 2025. Performed at Brandspankin' New Works Festival, New York, NY.<!-- A short play about a group of friends and the adventure they undertake when they decide to commit a crime.--></a></p>
+                        <p><a href="writing.html#index-3">An Evening With Mary Ann, 2024.<!-- One-woman show about a woman working herself up as she waits for her children to arrive for dinner.--></a></p>
+                    </div>
                     <!--<br>
                     <br>
                     <p>Criticism</p>
@@ -365,8 +428,8 @@
                 </div>
             </div>
             <hr>
-            <div id="sec2">
-                <h2 class="sec2-text">Film</h2>
+            <div id="sec2" class="sec">
+                <h2 class="sec2-text" id="sec2-title">Film</h2>
                 <a class="a-img-center" href="film_amaranta's_death.html"><img src="img/DSC00245.JPG"></a>
                 <div class="sec2-text sec2-text-not-final">
                     <p><a href="film_amaranta's_death.html">Amaranta's Death</a></p>
@@ -420,7 +483,7 @@
             </div>
             <hr>
             -->
-            <div id="sec4">
+            <div id="sec4" class="sec">
                 <div class="sec4-row"><!--use short-row when only horiz images are used.-->
                     <div id="sec4-item1" class="sec4-item">
                         <h2>Photos</h2>
